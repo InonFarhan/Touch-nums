@@ -1,0 +1,100 @@
+* {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+body {
+    background-color: burlywood;
+}
+
+h1 {
+    background-color: #fff;
+    width: 440px;
+}
+
+td {
+    width: 85px;
+    height: 85px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+td:hover {
+    background-color: white;
+    color: black;
+}
+
+.look {
+    background-color: black;
+    color: burlywood;
+    font-size: xxx-large;
+    transition: 1s;
+    margin: auto;
+    margin-top: 20px;
+    width: 250px;
+    position: absolute;
+    border-radius: 15%;
+    opacity: 0;
+}
+
+.look1 {
+    top: 25vh;
+    right: 15vw;
+}
+
+.look2 {
+    top: 25vh;
+    left: 15vw;
+}
+
+button {
+    border-radius: 25%;
+}
+
+.silent {
+    position: absolute;
+    top: 10;
+    right: 10;
+}
+
+.pause {
+    position: absolute;
+    top: 10;
+    left: 10;
+}
+
+.bless {
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.restart {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 15%;
+    background-color: #fff;
+    width: 440px;
+}
+
+.timer {
+    border-style: outset;
+    border-color: black;
+    border-radius: 15%;
+    background-color: #fff;
+    width: 340px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.levels {
+    border-style: outset;
+    border-color: black;
+    border-radius: 15%;
+    background-color: #fff;
+    width: 240px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
