@@ -7,6 +7,7 @@ const POP_SOUND = new Audio('sound/pop.mp3')
 var isPlay
 var isSilent
 var isVictory
+var isFirstClicked
 
 var gNumLevel = 25
 var gGameSpeed = 35
@@ -22,6 +23,7 @@ function initGame() {
     isVictory = false
     isSilent = false
     isPlay = true
+    isFirstClicked = true
     gCurrNum = 1
     gCounter = 0
     gNums = createNumsArr(gNumLevel)
@@ -31,15 +33,18 @@ function initGame() {
     changeHtml('.call2', gCurrNum)
     showForSec('.look1')
     showForSec('.look2')
-    gGameTimeInterval = setInterval(() => {
-        if (gSpeed < 0.001) gameOver()
-        changeHtml('.time', gSpeed.toFixed(3))
-        gSpeed -= 0.01
-    }, 10)
 }
 
 function cellClicked(clickedNum) {
     if (clickedNum.innerHTML.includes(gCurrNum)) {
+        if (isFirstClicked) {
+            gGameTimeInterval = setInterval(() => {
+                if (gSpeed < 0.001) gameOver()
+                changeHtml('.time', gSpeed.toFixed(3))
+                gSpeed -= 0.01
+            }, 10)
+            isFirstClicked = false
+        }
         if (!isSilent) POP_SOUND.play()
         clickedNum.innerHTML = ''
         gCurrNum++
